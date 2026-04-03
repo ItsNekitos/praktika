@@ -1,8 +1,6 @@
 <?php
-
-use App\Http\Controllers\CommentController;
-use App\Http\Controllers\LikeController;
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -11,15 +9,12 @@ Route::middleware(['auth:sanctum'])->group(function(){
     Route::get('/user', function(Request $request){
         return $request->user();
     });
-    Route::get("/postUser/{post}", [PostController::class, "post"]);
-    Route::post("/postadd", [PostController::class, "postadd"]);
-    Route::post("/postedit/{post}", [PostController::class, "postedit"]);
-    Route::post("/comment/{post}", [CommentController::class, "store"]);
-    Route::get("/like/{post}", [LikeController::class, "store"]);
+    Route::get("/postUser/{post}", [RecipeController::class, "post"]);
+    Route::post("/postadd", [RecipeController::class, "postadd"]);
+    Route::post("/postedit/{post}", [RecipeController::class, "postedit"]);
 });
-Route::get("/post/{post}", [PostController::class, "post"]);
-Route::get("/postsUser/{user}", [PostController::class, "postsUser"]);
-Route::get("/postsHome", [PostController::class, "postsHome"]);
-Route::post("/register", [UserController::class, "register"]);
-Route::post("/login", [UserController::class, "login"]);
-Route::post("/like/{post}", [LikeController::class, "index"]);
+Route::get("/post/{post}", [RecipeController::class, "post"]);
+Route::get("/postsUser/{user}", [RecipeController::class, "postsUser"]);
+Route::get("/postsHome", [RecipeController::class, "postsHome"]);
+Route::post("/register", [AuthController::class, "register"]);
+Route::post("/login", [AuthController::class, "login"]);

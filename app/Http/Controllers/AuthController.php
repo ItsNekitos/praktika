@@ -13,7 +13,7 @@ use Inertia\Testing\Concerns\Has;
 
 use function Laravel\Prompts\alert;
 
-class UserController extends Controller
+class AuthController extends Controller
 {
     public function register(UserRegisterRequest $request){
         $user = new User();
