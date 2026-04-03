@@ -5,7 +5,6 @@
         <HeaderComponent :user="user" :isUser="isUser" :changePage="changePage" :PUBLIC="PUBLIC" />
 
         <!-- Menu -->
-        <MenuComponent :server="server" :isUser="isUser" :successUser="successUser" :changePage="changePage" :logout="logout" />
         <template v-if="isLoad">
             <HomePage v-if="page == 'HomePage'" :user="user" :server="server" :changePage="changePage" :PUBLIC="PUBLIC" />
             <PostAdd v-if="page == 'PostAdd'" :server="server" :changePage="changePage" :pageId="pageId" :PUBLIC="PUBLIC" />
@@ -22,7 +21,6 @@
 <script>
 import FooterComponent from './components/FooterComponent.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
-import MenuComponent from './components/MenuComponent.vue';
 import HomePage from './pages/HomePage.vue';
 import PostAdd from './pages/PostAdd.vue';
 import SinglePage from './pages/SinglePage.vue';
@@ -43,7 +41,6 @@ export default {
     },
     components: {
         HeaderComponent,
-        MenuComponent,
         FooterComponent,
         HomePage,
         PostAdd,
