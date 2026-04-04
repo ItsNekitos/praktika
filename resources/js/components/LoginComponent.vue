@@ -1,16 +1,14 @@
 <template>
-    <li><h3>Login</h3></li>
-    <li>
-        <input type="text" placeholder="Username" v-model="username" /><br />
-        <p class="red" v-if="errors.username">
-            {{ errors.username.join('. ') }}
-        </p>
-        <input type="password" placeholder="Password" v-model="password" /><br />
-        <p class="red" v-if="errors.password">
-            {{ errors.password.join('. ') }}
-        </p>
-        <button type="submit" @click="login" class="button big fit">Войти</button>
-    </li>
+    <p class="authtext">Вход</p>
+    <input type="text" placeholder="Username" v-model="username" /><br />
+    <p class="red" v-if="errors.username">
+        {{ errors.username.join('. ') }}
+    </p>
+    <input type="password" placeholder="Password" v-model="password" /><br />
+    <p class="red" v-if="errors.password">
+        {{ errors.password.join('. ') }}
+    </p>
+    <button type="submit" @click="login" class="authbutton">Войти</button>
 </template>
 <script>
 export default {

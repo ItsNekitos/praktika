@@ -35,33 +35,6 @@
             <header>
                 <p>Фильтрация</p>
             </header>
-            <div class="form-check">
-                <h4>Категория</h4>
-                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1" />
-                <label class="form-check-label" for="radioDefault1"> Завтрак </label>
-                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1" />
-                <label class="form-check-label" for="radioDefault1"> Обед </label>
-                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1" />
-                <label class="form-check-label" for="radioDefault1"> Ужин </label>
-            </div>
-            <div class="form-check">
-                <h4>Время</h4>
-                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1" />
-                <label class="form-check-label" for="radioDefault1"> до 30 мин </label>
-                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1" />
-                <label class="form-check-label" for="radioDefault1"> 30-60 мин </label>
-                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1" />
-                <label class="form-check-label" for="radioDefault1"> более 60 мин </label>
-            </div>
-            <div class="form-check">
-                <h4>Сложность</h4>
-                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1" />
-                <label class="form-check-label" for="radioDefault1"> Легко </label>
-                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1" />
-                <label class="form-check-label" for="radioDefault1"> Средне </label>
-                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1" />
-                <label class="form-check-label" for="radioDefault1"> Сложно </label>
-            </div>
         </section>
     </section>
 </template>

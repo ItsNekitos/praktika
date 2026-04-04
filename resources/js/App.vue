@@ -10,6 +10,7 @@
             <PostAdd v-if="page == 'PostAdd'" :server="server" :changePage="changePage" :pageId="pageId" :PUBLIC="PUBLIC" />
             <SinglePage v-if="page == 'SinglePage'" :pageId="pageId" :isUser="isUser" :server="server" :changePage="changePage" :PUBLIC="PUBLIC" />
             <UserPage v-if="page == 'UserPage'" :pageId="pageId" :server="server" :changePage="changePage" :PUBLIC="PUBLIC" />
+            <AuthPage v-if="page == 'AuthPage'" :server="server" :changePage="changePage" :PUBLIC="PUBLIC" :successUser="successUser" />
         </template>
         <template v-else>
             <h1>ЗАГРУЗКА...</h1>
@@ -25,6 +26,7 @@ import HomePage from './pages/HomePage.vue';
 import PostAdd from './pages/PostAdd.vue';
 import SinglePage from './pages/SinglePage.vue';
 import UserPage from './pages/UserPage.vue';
+import AuthPage from './pages/AuthPage.vue';
 
 export default {
     name: 'App',
@@ -46,6 +48,7 @@ export default {
         PostAdd,
         SinglePage,
         UserPage,
+        AuthPage,
     },
     mounted() {
         if (localStorage.getItem('token')) {

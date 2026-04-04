@@ -38,9 +38,61 @@
     align-items: center;
     justify-content: center;
 }
+.authdiv{
+	width: 60%;
+	height: 600px;
+	margin-top: 100px;
+	border: solid black 1px;
+	border-radius: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.authdiv a{
+	color: rgb(166, 166, 166);
+	margin-top: 25px;
+	text-decoration: underline;
+}
 a {
     text-decoration: none;
     color: black;
+}
+.red{
+	height: 25px;
+	color: rgb(99, 33, 33);
+	border-radius: 5px;
+	border: solid rgb(255, 133, 133) 1px;
+	background-color: rgba(255, 0, 0, 0.166);
+	display: flex;
+	align-items: center;
+}
+button{
+	width: 100px;
+	height: 25px;
+    border: solid rgb(0, 166, 166) 1px;
+    border-radius: 5px;
+	color: white;
+	background-color: rgb(0, 166, 166);
+}
+.authbutton{
+	width: 80%;
+	height: 50px;
+	font-size: 20px;
+}
+input{
+    height: 50px;
+    width: 80%;
+    border-radius: 10px;
+    border: solid rgb(0, 0, 0) 1px;
+    padding-left: 10px;
+}
+#avatar{
+	border: none;
+}
+.authtext{
+	margin-bottom: 50px;
+	font-size: 36px;
 }
 #header h1 a {
     margin-left: 50px;
@@ -67,6 +119,8 @@ a {
 		flex-grow: 1;
 		-ms-flex: 1;
 		width: 100%;
+		display: flex;
+		justify-content: center;
 	}
 
 /* Sidebar */
