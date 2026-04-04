@@ -2,7 +2,7 @@
     <!-- Wrapper -->
     <div id="wrapper">
         <!-- Header -->
-        <HeaderComponent :user="user" :isUser="isUser" :changePage="changePage" :PUBLIC="PUBLIC" />
+        <HeaderComponent :user="user" :isUser="isUser" :changePage="changePage" :PUBLIC="PUBLIC" :logout="logout" />
 
         <!-- Menu -->
         <template v-if="isLoad">
