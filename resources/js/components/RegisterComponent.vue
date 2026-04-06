@@ -22,7 +22,7 @@
 <script>
 export default {
     name: 'RegisterComponent',
-    props: ['server', 'successUser'],
+    props: ['server', 'successUser', 'changePage'],
     data() {
         return {
             name: null,
@@ -47,6 +47,7 @@ export default {
                         this.errors = result.errors;
                     }
                     if (result.token) {
+                        this.changePage('HomePage');
                         this.successUser(result.token);
                     }
                 })

@@ -6,7 +6,8 @@
             <div v-if="isUser" class="dropdown">
                 <button class="dropbtn">Меню</button>
                 <div class="dropdown-content">
-                    <a href="#" @click.prevent="changePage('UserPage')">Профиль</a>
+                    <a v-if="user.role == 'admin'" href="#" @click.prevent="changePage('AdminPage')">Панель</a>
+                    <a v-else href="#" @click.prevent="changePage('UserPage')">Профиль</a>
                     <a href="#" @click.prevent="logout()">Выйти</a>
                 </div>
             </div>
